@@ -63,6 +63,15 @@
   "url": "https://noorslist.github.io/2026-10-24-tcf-orlando-annual-gala/"
  },
  {
+  "slug": "2026-10-30-meet-angie-nixon",
+  "date": "2026-10-30",
+  "end": null,
+  "title": "Meet Angie Nixon at Jammah Masjid",
+  "place": "ICO",
+  "date_label": null,
+  "url": "https://noorslist.github.io/2026-10-30-meet-angie-nixon/"
+ },
+ {
   "slug": "2026-10-30-ourmsc-seniors-meetup",
   "date": "2026-10-30",
   "end": null,
@@ -70,6 +79,15 @@
   "place": "Dough Show",
   "date_label": null,
   "url": "https://noorslist.github.io/2026-10-30-ourmsc-seniors-meetup/"
+ },
+ {
+  "slug": "2026-10-30-vote-for-the-ummah",
+  "date": "2026-10-30",
+  "end": null,
+  "title": "After Jummah, Vote for the Ummah!",
+  "place": "",
+  "date_label": null,
+  "url": "https://noorslist.github.io/2026-10-30-vote-for-the-ummah/"
  },
  {
   "slug": "2026-10-31-amcc-pickleball-tournament",
@@ -160,6 +178,15 @@
   "place": "MAGO",
   "date_label": "Saturdays",
   "url": "https://noorslist.github.io/2026-10-31-umss-free-medical-clinic/"
+ },
+ {
+  "slug": "2026-11-01-clocks-fall-back",
+  "date": "2026-11-01",
+  "end": null,
+  "title": "Clocks Fall Back 1 Hour",
+  "place": "",
+  "date_label": null,
+  "url": "https://noorslist.github.io/2026-11-01-clocks-fall-back/"
  },
  {
   "slug": "2026-11-01-niche-market",
