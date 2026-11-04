@@ -3,7 +3,9 @@
 Every public page (homepage + every event page) must carry SNIPPET just before </body>.
 - home_live.py adds it to index.html automatically.
 - Event pages: run  python3 _tools/analytics.py  from the repo root after building pages;
-  it adds the snippet to any yyyy-mm-dd-*/index.html that lacks it (safe to re-run).
+  it adds the snippet to any yyyy-mm-dd-*/index.html that lacks it (safe to re-run),
+  plus a <link rel="canonical" href="https://noorslist.org/<slug>/"> in <head>.
+  The homepage gets canonical https://noorslist.org/ the same way (via home_live.py).
 - NOT for the WhatsApp images (build.py img_page / shot.py): those are screenshots, not visits.
   (count.js also ignores localhost, so local Playwright checks are not counted.)
 
@@ -26,10 +28,28 @@ SNIPPET = (MARK + CLICKS +
            "<!-- End GoatCounter -->") % CODE
 
 
-def add(html: str) -> str:
-    """Insert the snippet before the last </body> (no-op if already there)."""
+SITE = "https://noorslist.org"
+
+
+def canonical_tag(path: str) -> str:
+    """<link rel="canonical"> for a site path like "/" or "/2026-11-08-slug/".
+    GoatCounter counts the canonical path, so /slug/index.html, ?fbclid=... etc.
+    are all counted as /slug/ (and search engines see one address per page)."""
+    return '<link rel="canonical" href="%s%s">' % (SITE, path)
+
+
+def add(html: str, path: str = None) -> str:
+    """Insert the snippet before the last </body> (no-op if already there).
+    With path, also insert a canonical link before </head> if the page has none.
+    Pages that already carry the snippet are left untouched (older event pages
+    were deliberately not given a canonical link — they age out)."""
     if MARK in html:
         return html
+    if path and 'rel="canonical"' not in html:
+        h = html.find("</head>")
+        if h < 0:
+            raise ValueError("no </head> in page")
+        html = html[:h] + canonical_tag(path) + "\n" + html[h:]
     i = html.rfind("</body>")
     if i < 0:
         raise ValueError("no </body> in page")
@@ -40,7 +60,7 @@ def stamp_event_pages(root: Path) -> int:
     n = 0
     for p in sorted(root.glob("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*/index.html")):
         old = p.read_text(encoding="utf-8")
-        new = add(old)
+        new = add(old, "/%s/" % p.parent.name)
         if new != old:
             p.write_text(new, encoding="utf-8"); n += 1
     return n

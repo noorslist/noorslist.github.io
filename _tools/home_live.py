@@ -109,5 +109,5 @@ header .mark a {{ color:inherit; text-decoration:none }}
 <script data-goatcounter="https://noorslist.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body></html>"""
 
 out = Path(sys.argv[1] if len(sys.argv) > 1 else "index.html")
-out.write_text(analytics.add(page), encoding="utf-8")
+out.write_text(analytics.add(page, "/"), encoding="utf-8")
 print("wrote", out, len(events), "rows")
