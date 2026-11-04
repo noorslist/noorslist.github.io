@@ -4,7 +4,7 @@ Look = approved theme v1 (CSS taken from the approved mockup in build.py)."""
 import json, re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-import build
+import build, analytics
 from sheet_rows import ROWS
 
 GH_HOSTS = ("https://noorslist.github.io", "https://noorslist.org")
@@ -108,5 +108,5 @@ header .mark a {{ color:inherit; text-decoration:none }}
 </div><script>{JS.replace("__DATA__", json.dumps(events, ensure_ascii=False))}</script></body></html>"""
 
 out = Path(sys.argv[1] if len(sys.argv) > 1 else "index.html")
-out.write_text(page, encoding="utf-8")
+out.write_text(analytics.add(page), encoding="utf-8")
 print("wrote", out, len(events), "rows")
