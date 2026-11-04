@@ -105,8 +105,7 @@ header .mark a {{ color:inherit; text-decoration:none }}
 <main id="list"><noscript><p>Please turn on JavaScript to see the events list.</p></noscript></main>
 <footer>Send an event: text or WhatsApp <a href="tel:+14077740332">407-774-0332</a> ·
 <a href="mailto:info@noorslist.org">info@noorslist.org</a><br>Want to sponsor Noor's List? Get in touch.</footer>
-</div><script>{JS.replace("__DATA__", json.dumps(events, ensure_ascii=False))}</script>
-<script data-goatcounter="https://noorslist.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body></html>"""
+</div><script>{JS.replace("__DATA__", json.dumps(events, ensure_ascii=False))}</script></body></html>"""
 
 out = Path(sys.argv[1] if len(sys.argv) > 1 else "index.html")
 out.write_text(analytics.add(page, "/"), encoding="utf-8")
