@@ -32,7 +32,7 @@ img { max-width: 100%; }
 .wrap { max-width: 620px; margin: 0 auto; padding-block: 14px 40px; display: flex; flex-direction: column; gap: 18px; }
 .bar { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 .mark { font: 700 1.25rem/1 var(--display); color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-.mark::after { content: ""; display: inline-block; width: .42em; height: .42em; border-radius: 50%; background: var(--lamp); margin-left: .18em; box-shadow: 0 0 10px var(--lamp); }
+.mark::after { content: ""; display: inline-block; width: .42em; height: .42em; border-radius: 50%; background: var(--lamp); margin-left: .18em; }
 .bar small { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
 article { display: flex; flex-direction: column; gap: 18px; }
 .flyer { display: block; width: 100%; height: auto; border-radius: 6px; background: var(--line); }
