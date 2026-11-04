@@ -7,13 +7,14 @@ sys.path.insert(0, str(Path(__file__).parent))
 import build
 from sheet_rows import ROWS
 
-GH = "https://noorslist.github.io"
+GH_HOSTS = ("https://noorslist.github.io", "https://noorslist.org")
 
 def split(s): return [x.strip() for x in s.split(",") if x.strip()]
 
 events = []
 for (typ, d, e, t, w, title, v, orgs, aud, url) in ROWS:
-    if url.startswith(GH): url = url[len(GH):]          # same-site link works on noorslist.org too
+    for h in GH_HOSTS:
+        if url.startswith(h): url = url[len(h):]          # same-site link -> relative
     events.append({"k": typ, "d": d, "e": e, "t": t.replace(" - ", "–"), "w": w,
                    "n": title, "v": v, "o": split(orgs), "a": split(aud), "u": url})
 
