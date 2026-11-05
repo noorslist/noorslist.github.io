@@ -288,6 +288,15 @@
   "url": "https://noorslist.github.io/2026-11-14-masjid-al-rahman-fall-festival/"
  },
  {
+  "slug": "2026-11-14-masjid-al-rahman-youth-basketball",
+  "date": "2026-11-14",
+  "end": null,
+  "title": "Fall Festival Youth Basketball Tournament",
+  "place": "Masjid Al-Rahman",
+  "date_label": null,
+  "url": "https://noorslist.org/2026-11-14-masjid-al-rahman-youth-basketball/"
+ },
+ {
   "slug": "2026-11-15-dabka-on-caregivers",
   "date": "2026-11-15",
   "end": null,
@@ -297,13 +306,22 @@
   "url": "https://noorslist.github.io/2026-11-15-dabka-on-caregivers/"
  },
  {
+  "slug": "2026-11-15-elegantly-lib-brewed-bookmarks",
+  "date": "2026-11-15",
+  "end": null,
+  "title": "Brewed Bookmarks",
+  "place": "Arwa Yemeni Coffee",
+  "date_label": null,
+  "url": "https://noorslist.org/2026-11-15-elegantly-lib-brewed-bookmarks/"
+ },
+ {
   "slug": "2026-11-19-cg-usa-united-plates",
   "date": "2026-11-19",
   "end": null,
   "title": "Fall United Plates Project",
   "place": "Oviedo Amphitheatre",
   "date_label": null,
-  "url": "https://noorslist.github.io/2026-11-19-cg-usa-united-plates/"
+  "url": "https://noorslist.org/2026-11-19-cg-usa-united-plates/"
  },
  {
   "slug": "2026-12-06-ncom-medical-school-celebration",
