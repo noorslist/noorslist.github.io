@@ -1,0 +1,6 @@
+# Nothing but the website lives here (this repo is public and everything in it is served on noorslist.org).
+# Builders and state are in the private repo noorslist/noorslist-private.
+__pycache__/
+*.pyc
+out/
+*.zip
