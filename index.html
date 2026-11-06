@@ -62,7 +62,7 @@ a.card:hover { border-color:var(--lamp) }
 footer { margin-top:36px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem }
 footer a { color:inherit }
 @media (max-width:420px) { .card { grid-template-columns:66px 1fr 10px; gap:10px } .time { font-size:.8rem }
-  .progs .card { grid-template-columns:1fr 10px } .progs .time { grid-column:1; } }
+  .progs .card { grid-template-columns:1fr 10px } .progs .time { grid-column:1 / -1; } .progs .body { grid-column:1; } }
 html.q-chips .chip.aud { background:var(--line) !important; color:var(--ink) !important }
 html.q-glow header .mark .dot { box-shadow:none }
 html.q-lines .card { background:transparent; border:0; border-bottom:1px solid var(--line); border-radius:0; padding:12px 2px; margin:0 }
