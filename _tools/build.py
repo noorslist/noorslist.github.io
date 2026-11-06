@@ -199,7 +199,7 @@ def img_page(title, sub, rows, cap=None):
     return f"""<!DOCTYPE html><html class="{CLS}"><head><meta charset="utf-8">{FONTS}<style>{IMG_CSS}{IMG_QUIET}{IMG_FOOT}</style>{LISTEN}</head><body>
 <div class="top"><div class="mark">Noor's List<i class="dot"></i></div><h1>{title}</h1><div class="sub">{sub}</div></div>
 <div class="main">{''.join(h)}</div>
-<div class="foot"><div class="u">noorslist<b>.</b>org</div><div class="p">Flyers, links & maps<br>Text/WhatsApp 407-774-0332</div></div>
+<div class="foot"><div class="u">noorslist<b>.</b>org</div><div class="p">Full list & details<br>Text/WhatsApp 407-774-0332</div></div>
 </body></html>"""
 
 if __name__ == "__main__":
